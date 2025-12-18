@@ -3,132 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domain For Sale</title>
+    <title>Execute Crisply</title>
     <style>
-        /* Modern Reset & Dark Mode Base */
+        /* BASE STYLES - LIGHT MODE */
         * { box-sizing: border-box; margin: 0; padding: 0; }
+       
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0d1117; /* Github Dark Dimmed */
-            color: #c9d1d9;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #4b5563;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
             min-height: 100vh;
             padding: 20px;
-        }
-
-        /* Container */
-        .container {
-            max-width: 500px;
-            width: 100%;
             text-align: center;
-            background: #161b22;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            border: 1px solid #30363d;
+            overflow-x: hidden;
         }
-
-        /* Typography & Color */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
+        /* TOP LABEL */
+        .brand-label {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
         }
-        
-        .accent {
-            color: #544bf7; /* Your requested color */
+        /* THE BLOCK LOGO */
+        .logo-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            width: 100%;
         }
-
-        p { margin-bottom: 30px; line-height: 1.6; }
-
-        /* Form Styling */
+        .letter-box {
+            background-color: #9ca3af;
+            color: white;
+            width: 60px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            border-radius: 2px;
+            user-select: none;
+            flex-shrink: 0;
+        }
+        /* TAGLINES */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4b5563;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #6b7280;
+            margin-bottom: 50px;
+        }
+        /* INQUIRY FORM */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            margin-bottom: 50px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         input, textarea {
             width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            background-color: #0d1117;
-            color: #fff;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
             font-size: 1rem;
+            background: #f9fafb;
+            color: #374151;
+            transition: all 0.2s;
         }
-
         input:focus, textarea:focus {
             outline: none;
-            border-color: #544bf7;
-            box-shadow: 0 0 0 3px rgba(84, 75, 247, 0.3);
+            border-color: #9ca3af;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.2);
         }
-
         button {
             width: 100%;
-            padding: 15px;
-            background-color: #544bf7;
+            padding: 14px;
+            background-color: #6b7280;
             color: white;
             border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
         button:hover {
-            background-color: #433bc0;
+            background-color: #4b5563;
+        }
+        /* CONTENT SECTIONS */
+        .content-section {
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .content-section li {
+            margin-bottom: 10px;
+        }
+        /* FOOTER */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: auto;
+        }
+        /* MOBILE FIXES */
+        @media (max-width: 600px) {
+            .logo-container {
+                gap: 3px;
+            }
+            .letter-box {
+                width: calc((100vw - 18px) / 7);
+                height: calc(1.25 * ((100vw - 18px) / 7));
+                font-size: calc(0.042 * 100vw);
+                border-radius: 2px;
+            }
+            h2 {
+                font-size: 1.2rem;
+                margin-top: 10px;
+            }
+            .brand-label {
+                margin-bottom: 20px;
+            }
+        }
+            /* LINKEDIN STYLE */
+        .linkedin-area {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .linkedin-link {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
 
-        .domain-display {
-            font-size: 1.2rem;
-            font-family: monospace;
-            background: rgba(84, 75, 247, 0.1);
-            color: #544bf7;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        .related-list a {
-            color: #ffffff !important;
+        .linkedin-link:hover {
+            opacity: 0.8;
             text-decoration: none;
-            margin-right: 20px;
-            font-size: 1.1rem;
+        }
+
+        .linkedin-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+            fill: #0a66c2; /* Official LinkedIn Blue */
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>Domain For Sale</h1>
-    <p>The domain <span id="domain-name" class="domain-display">this website</span> is available for purchase.</p>
-    
-    <form id="contact-form" action="https://formspree.io/f/mvgenkvv" method="POST">
-        
-        <input type="hidden" name="Domain_Source" id="hidden-domain">
-
-        <input type="email" name="email" placeholder="Your Email Address" required>
-        <input type="number" name="offer" placeholder="Offer Amount (USD)" required>
-        <textarea name="message" rows="4" placeholder="Serious offers appreciated"></textarea>
-        
-        <button type="submit">Submit Offer</button>
-    </form>
-    <div class="related-domains">
-        <h3>Related Domains Available</h3>
-        <ul class="related-list">
-            <a href="https://crisply.net">crisply.net</a>
-            <a href="https://executecrisply.com">executecrisply.com</a>
-        </ul>
+    <div class="logo-container">
+        <div class="letter-box">E</div>
+        <div class="letter-box">X</div>
+        <div class="letter-box">E</div>
+        <div class="letter-box">C</div>
+        <div class="letter-box">U</div>
+        <div class="letter-box">T</div>
+        <div class="letter-box">E</div>
     </div>
-</div>
+    <div class="logo-container">
+        <div class="letter-box">C</div>
+        <div class="letter-box">R</div>
+        <div class="letter-box">I</div>
+        <div class="letter-box">S</div>
+        <div class="letter-box">P</div>
+        <div class="letter-box">L</div>
+        <div class="letter-box">Y</div>
+    </div>
+    <h2>Build innovative products.</h2>
+    <h2>Develop enduring businesses.</h2>
+    <h2>Turnaround underachieving teams.</h2>
 
-<script>
-    // 1. Get the current domain name (e.g., example.com)
-    const currentDomain = window.location.hostname;
-
-    // 2. Display it in the text
-    document.getElementById('domain-name').innerText = currentDomain;
-
-    // 3. Insert it into the hidden form field so you know which domain they want
-    document.getElementById('hidden-domain').value = currentDomain;
-</script>
-
+    <section class="content-section" id="about">
+        <h2></h2>
+        <p>We bring extensive experience in company building and software products, starting from ideation to growth stages, as we measure success by creating enduring software-based businesses with durable competitive advantages.</p>
+    </section>
+    <section class="content-section" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Innovative Product Development: Create fast, economical, and loved software products.</li>
+            <li>Business Development: Strategies to grow enterprise value and establish a virtuous flywheel.</li>
+            <li>Turnaround Services: Revitalize underachieving teams.</li>
+        </ul>
+    </section>
+     <section class="content-section" id="about">
+    <h2>Ross Kudwitt's Background</h2>
+    <div class="linkedin-area">
+        <a href="https://linkedin.com/in/kudwitt" target="_blank" class="linkedin-link">
+            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+    </section>
+    </div>
+        <section class="content-section" id="contact">
+        <h2>Lets Brainstorm</h2>
+       <div class="form-container">
+        <form action="https://formspree.io/f/xlgredry" method="POST">
+            <input type="hidden" name="_subject" value="New Inquiry for Execute Crisply">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="name@company.com" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" placeholder="How can we innovate together?" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Execute Crisply, LLC. All rights reserved.</p>
+    </footer>
 </body>
 </html>
