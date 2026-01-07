@@ -3,275 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Execute Crisply</title>
-    <style>
-        /* BASE STYLES - LIGHT MODE */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-       
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
-            color: #4b5563;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            padding: 20px;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        /* TOP LABEL */
-        .brand-label {
-            font-size: 1.1rem;
-            color: #6b7280;
-            margin-bottom: 30px;
-            letter-spacing: 0.5px;
-        }
-        /* THE BLOCK LOGO */
-        .logo-container {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .letter-box {
-            background-color: #9ca3af;
-            color: white;
-            width: 60px;
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            border-radius: 2px;
-            user-select: none;
-            flex-shrink: 0;
-        }
-        /* TAGLINES */
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4b5563;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
-        }
-        .tagline {
-            font-family: "Georgia", "Times New Roman", serif;
-            font-style: italic;
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: #6b7280;
-            margin-bottom: 50px;
-        }
-        /* INQUIRY FORM */
-        .form-container {
-            width: 100%;
-            max-width: 400px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e7eb;
-            margin-bottom: 50px;
-        }
-        .input-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #9ca3af;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
-            font-size: 1rem;
-            background: #f9fafb;
-            color: #374151;
-            transition: all 0.2s;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #9ca3af;
-            background: #fff;
-            box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.2);
-        }
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #6b7280;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        button:hover {
-            background-color: #4b5563;
-        }
-        /* CONTENT SECTIONS */
-        .content-section {
-            width: 100%;
-            max-width: 800px;
-            text-align: left;
-            margin-bottom: 40px;
-        }
-        .content-section ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .content-section li {
-            margin-bottom: 10px;
-        }
-        /* FOOTER */
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.8rem;
-            color: #6b7280;
-            margin-top: auto;
-        }
-        /* MOBILE FIXES */
-        @media (max-width: 600px) {
-            .logo-container {
-                gap: 3px;
-            }
-            .letter-box {
-                width: calc((100vw - 18px) / 7);
-                height: calc(1.25 * ((100vw - 18px) / 7));
-                font-size: calc(0.042 * 100vw);
-                border-radius: 2px;
-            }
-            h2 {
-                font-size: 1.2rem;
-                margin-top: 10px;
-            }
-            .brand-label {
-                margin-bottom: 20px;
-            }
-        }
-            /* LINKEDIN STYLE */
-        .linkedin-area {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .linkedin-link {
-            display: inline-flex;
-            align-items: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1em;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .linkedin-link:hover {
-            opacity: 0.8;
-            text-decoration: none;
-        }
-
-        .linkedin-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 12px;
-            fill: #0a66c2; /* Official LinkedIn Blue */
-        }
-    </style>
+    <title>Crisply | Intelligent Private Jet Charter</title>
+    <meta name="description" content="Crisply is a Part 295 Air Charter Broker serving YVHNW and HENRY travelers. Instant quotes, verified safety, and digital-first logistics.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="logo-container">
-        <div class="letter-box">E</div>
-        <div class="letter-box">X</div>
-        <div class="letter-box">E</div>
-        <div class="letter-box">C</div>
-        <div class="letter-box">U</div>
-        <div class="letter-box">T</div>
-        <div class="letter-box">E</div>
-    </div>
-    <div class="logo-container">
-        <div class="letter-box">C</div>
-        <div class="letter-box">R</div>
-        <div class="letter-box">I</div>
-        <div class="letter-box">S</div>
-        <div class="letter-box">P</div>
-        <div class="letter-box">L</div>
-        <div class="letter-box">Y</div>
-    </div>
-    <h2>Build innovative products</h2>
-    <h2>Develop enduring businesses</h2>
-    <h2>Turnaround underachieving teams</h2>
 
-    <section class="content-section" id="about">
-        <h2></h2>
-        <p>We bring extensive experience in company building and software products, starting from ideation to growth stages, as we measure success by creating enduring software-based businesses with durable competitive advantages.</p>
-    </section>
-    <section class="content-section" id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Innovative Product Development: Create fast, economical, and loved software products.</li>
-            <li>Business Development: Strategies to grow enterprise value and establish a virtuous flywheel.</li>
-            <li>Turnaround Services: Revitalize underachieving teams.</li>
-        </ul>
-    </section>
-     <section class="content-section" id="about">
-    <h2>Ross Kudwitt's Background</h2>
-    <h3>Software Engineer</h3>
-    <p>Started at <a href="https://www.ece.rutgers.edu/">engineering school</a> and interned at <a href="https://ibm.com">IBM</a> as a pre-professional writing <a href="https://www.perplexity.ai/search/what-is-cpu-microcode-ZWmLlSaoRyOG0NxMvIESXw">microcode</a>.</p>
-    <br>
-    <h3>Startup CTO @ GFI Group, Auctions.com, and Patron Technology</h3>
-    <p><a href="https://www.gfigroup.com/">GFI Group</a> is a Wall Street Interdealer Broker and a selling a new issue bond auction trading platform to them. Auctions.com was a well funded startup with stellar technology that tried but failed to compete with eBay. Patron Technology (now <a href="https://leapevent.tech/">Leap</a>) is the system of record for many arts and cultural organizations and was sold to <a href="https://www.provequity.com/">Providence Equity</a>.</p>
-    <br>
-    <h3>CIO/CTO of <a href="https://timex.com">Timex</a> and <a href="https://www.nypl.org/">The New York Public Library</a></h3>
-    <p>Hired by CEO's to turnaround technology teams of large, venerable enterprises.</p>
-    <br>
-    <h3>Judge and mentor at the <a href="https://www.hbs.edu/newventurecompetition/business-track/judging">Harvard Business School New Venture Competition</a> for the past 5+ years</h3>
-    <p>The Rock Business Track of Harvard Business School's New Venture Competition is a high-stakes annual event for student-led high-growth ventures, where teams receive rigorous feedback from top venture capitalists, investors, and entrepreneurs.</p>
-    <div class="linkedin-area">
-        <a href="https://linkedin.com/in/kudwitt" target="_blank" class="linkedin-link">
-            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-        </a>
-    </section>
-    </div>
-        <section class="content-section" id="contact">
-        <h2>Lets Brainstorm</h2>
-       <div class="form-container">
-        <form action="https://formspree.io/f/xlgredry" method="POST">
-            <input type="hidden" name="_subject" value="New Inquiry for Execute Crisply">
-            <div class="input-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your Name" required>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/crisply-logo.png" alt="Crisply Circuit Bird Logo">
+                <span class="logo-text">Crisply.</span>
             </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="name@company.com" required>
+            <ul class="nav-links">
+                <li><a href="#experience">The Experience</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#quote" class="btn-nav">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <h1>Flight, <span class="highlight">Decoded.</span></h1>
+            <p class="hero-sub">The friction-free charter brokerage for the digital generation. <br>Part 295 Compliant. Safety Vetted. On Demand.</p>
+            <a href="#quote" class="btn-hero">Start Your Journey</a>
+        </div>
+    </header>
+
+    <section id="experience" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Crisply Standard</h2>
+                <p>We don't just book jets. We engineer logistics.</p>
             </div>
-            <div class="input-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4" placeholder="How can we innovate together?" required></textarea>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fas fa-bolt card-icon"></i>
+                    <h3>Instant Agility</h3>
+                    <p>From inquiry to wheels-up in as little as 4 hours. Our digital workflow cuts the paperwork lag.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3>Safety by Design</h3>
+                    <p>We are not a carrier. We are your firewall. We only broker flights with Part 135 operators who meet ARGUS Gold/Platinum standards.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mobile-alt card-icon"></i>
+                    <h3>Native Tech</h3>
+                    <p>No fax machines. No call centers. Digital contracts, crypto acceptance, and seamless communication.</p>
+                </div>
             </div>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-    <footer>
-        <p>&copy; 2025 Execute Crisply, LLC. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section id="quote" class="section-padding bg-white">
+        <div class="container quote-container">
+            <div class="quote-header">
+                <h2>Request a Quote</h2>
+                <p>Tell us your mission. We will source the optimal aircraft from our vetted network.</p>
+            </div>
+
+            <form id="charter-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                
+                <input type="hidden" name="_subject" value="New Charter Inquiry - Crisply Website">
+                <input type="hidden" name="_next" value="https://crisply.com/thank-you.html">
+                <input type="text" name="_gotcha" style="display:none"> <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="J. Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="you@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="depart">Departure (City/Airport)</label>
+                        <input type="text" id="depart" name="departure" required placeholder="e.g. TEB (Teterboro)">
+                    </div>
+                    <div class="form-group">
+                        <label for="arrive">Arrival (City/Airport)</label>
+                        <input type="text" id="arrive" name="arrival" required placeholder="e.g. VNY (Van Nuys)">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pax">Passengers</label>
+                        <input type="number" id="pax" name="passengers" min="1" max="18" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aircraft">Preferred Aircraft Class</label>
+                        <select id="aircraft" name="aircraft">
+                            <option value="No Preference">Recommended for Mission</option>
+                            <option value="Light Jet">Light Jet (4-6 Pax)</option>
+                            <option value="Midsize Jet">Midsize Jet (7-8 Pax)</option>
+                            <option value="Super Midsize">Super Midsize (Coast to Coast)</option>
+                            <option value="Heavy Jet">Heavy Jet (Intercontinental)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn-submit">Generate Quote</button>
+                    <p class="form-disclaimer">By submitting, you agree to receive a quote via email. Your data is secure.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Crisply.</h3>
+                    <p>The future of charter brokerage.</p>
+                </div>
+                <div class="footer-legal">
+                    <h4>Regulatory Disclosures</h4>
+                    <p class="legal-text">
+                        <strong>Broker Status:</strong> Crisply is an Air Charter Broker and acts as an agent for its clients or as an indirect air carrier, depending on the specific engagement. Crisply is not a Direct Air Carrier and does not own, maintain, or operate any aircraft. 
+                    </p>
+                    <p class="legal-text">
+                        <strong>Operational Control:</strong> All flights arranged by Crisply are performed by fully FAA-licensed and DOT-registered Part 135 Direct Air Carriers (or foreign equivalent) who maintain full operational control of the aircraft at all times. These carriers are solely responsible for the air transportation services.
+                    </p>
+                    <p class="legal-text">
+                        <strong>Consumer Protection:</strong> In accordance with 14 CFR Part 295, clients are entitled to receive the name of the operating Direct Air Carrier prior to the flight. If this information is unavailable at the time of booking, it will be provided as soon as it becomes available.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crisply Aviation. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
