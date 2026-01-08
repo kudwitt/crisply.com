@@ -3,443 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crisply | Part 295 Charter Broker</title>
+    <title>Crisply | Intelligent Private Jet Charter</title>
+    <meta name="description" content="Crisply is a Part 295 Air Charter Broker serving YVHNW and HENRY travelers. Instant quotes, verified safety, and digital-first logistics.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        /* --- YOUR ORIGINAL CSS (With Mobile & Contrast Fixes Applied) --- */
-
-        /* CSS Reset & Variables */
-        :root {
-            --circuit-blue: #0092CA; /* From Logo */
-            --alert-red: #D9534F;    /* From Logo */
-            --tarmac-slate: #393E46; /* Primary Text */
-            --fuselage-white: #FFFFFF;
-            --carbon-grey: #F4F4F4;
-            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-stack);
-            color: var(--tarmac-slate);
-            line-height: 1.6;
-            background-color: var(--fuselage-white);
-        }
-
-        /* Layout Utilities */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .bg-light { background-color: var(--carbon-grey); }
-        .bg-white { background-color: var(--fuselage-white); }
-
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 800; /* Brutalist Bold */
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-
-        h1 { 
-            font-size: 3.5rem; 
-            line-height: 1.1; 
-            /* FIX: Added Text Shadow for better contrast on "Decoded" */
-            text-shadow: 0px 4px 12px rgba(0,0,0,0.5);
-        }
-        
-        h2 { font-size: 2.5rem; }
-        p { font-weight: 300; font-size: 1.1rem; }
-
-        .highlight { 
-            color: var(--circuit-blue); 
-            /* FIX: Ensure the blue pops against the dark background */
-            text-shadow: 0px 2px 8px rgba(0,0,0,0.6);
-        }
-
-        /* Navigation */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); /* Tech feel */
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .logo img { height: 40px; }
-        .logo-text { font-weight: 800; font-size: 1.5rem; color: var(--tarmac-slate); }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--tarmac-slate);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .btn-nav {
-            background-color: var(--circuit-blue);
-            color: white!important;
-            padding: 10px 20px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-nav:hover { background-color: #007bb5; }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 85vh;
-            /* Placeholder background - you can replace this URL */
-            background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); 
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            /* FIX: Slightly darker gradient to help text contrast */
-            background: linear-gradient(135deg, rgba(57,62,70,0.95) 0%, rgba(0,146,202,0.3) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            max-width: 800px;
-        }
-
-        .btn-hero {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 15px 35px;
-            background-color: var(--circuit-blue);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 4px;
-            border: 2px solid var(--circuit-blue);
-            transition: all 0.3s ease;
-        }
-
-        .btn-hero:hover {
-            background-color: transparent;
-            color: white;
-        }
-
-        /* Cards */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover { transform: translateY(-5px); }
-        .card-icon { font-size: 2rem; color: var(--circuit-blue); margin-bottom: 20px; }
-
-        /* Form Styles */
-        .quote-container { max-width: 800px; margin: 0 auto; }
-        .quote-header { text-align: center; margin-bottom: 40px; }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-group { display: flex; flex-direction: column; }
-        .form-group label { margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
-
-        input, select, textarea {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: var(--font-stack);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            width: 100%;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--circuit-blue);
-            box-shadow: 0 0 0 3px rgba(0,146,202,0.1);
-        }
-
-        .btn-submit {
-            width: 100%;
-            margin-top: 30px;
-            padding: 15px;
-            background-color: var(--circuit-blue);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn-submit:hover { background-color: #007bb5; }
-        .form-disclaimer { font-size: 0.8rem; color: #888; text-align: center; margin-top: 15px; }
-
-        /* Footer & Compliance */
-        .footer {
-            background-color: var(--tarmac-slate);
-            color: #fff;
-            padding: 60px 0 20px;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 50px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand h3 { color: var(--circuit-blue); margin-bottom: 15px; }
-        .footer-legal h4 { color: #ccc; margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        .legal-text {
-            font-size: 0.75rem; /* Part 295 small print compliance */
-            color: #aaa;
-            margin-bottom: 10px;
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        .legal-text strong { color: #fff; }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            text-align: center;
-            color: #666;
-            font-size: 0.8rem;
-        }
-
-        /* --- MOBILE FIXES --- */
-        @media (max-width: 768px) {
-            /* Fix Navigation Stacking */
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-                gap: 15px;
-                padding-bottom: 10px;
-            }
-
-            .nav-links li {
-                width: 100%;
-                text-align: center;
-            }
-
-            .btn-nav {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            /* Fix Form Grid */
-            .form-grid { grid-template-columns: 1fr; }
-            
-            /* Fix Typography */
-            h1 { font-size: 2.5rem; }
-            
-            /* Fix Footer */
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="bird.jpg" alt="Crisply Logo">
-                <span class="logo-text">Crisply</span>
-            </a>
+            <div class="logo">
+                <img src="assets/crisply-logo.png" alt="Crisply Circuit Bird Logo">
+                <span class="logo-text">Crisply.</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">The Experience</a></li>
+                <li><a href="#safety">Safety</a></li>
                 <li><a href="#quote" class="btn-nav">Get a Quote</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
         <div class="overlay"></div>
         <div class="container hero-content">
-            <h1>Private Jet Charter, <br><span class="highlight">Decoded.</span></h1>
-            <p>On-demand aviation for the modern high performer. No membership fees. Just instant access.</p>
-            <a href="#quote" class="btn-hero">Request a Flight</a>
+            <h1>Flight, <span class="highlight">Decoded.</span></h1>
+            <p class="hero-sub">The friction-free charter brokerage for the digital generation. <br>Part 295 Compliant. Safety Vetted. On Demand.</p>
+            <a href="#quote" class="btn-hero">Start Your Journey</a>
         </div>
-    </section>
+    </header>
 
-    <!-- Services Section -->
-    <section id="services" class="section-padding bg-white">
+    <section id="experience" class="section-padding bg-light">
         <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <h2>Intelligent Aviation</h2>
-                <p>Designed for the YVHNW and HENRY demographics who demand speed, transparency, and safety without the old-school brokerage friction.</p>
+            <div class="section-header">
+                <h2>The Crisply Standard</h2>
+                <p>We don't just book jets. We engineer logistics.</p>
             </div>
-            
             <div class="grid-3">
                 <div class="card">
-                    <i class="fas fa-plane-departure card-icon"></i>
-                    <h3>Instant Access</h3>
-                    <p>Global fleet access with response times under 2 hours. We move at the speed of your business.</p>
+                    <i class="fas fa-bolt card-icon"></i>
+                    <h3>Instant Agility</h3>
+                    <p>From inquiry to wheels-up in as little as 4 hours. Our digital workflow cuts the paperwork lag.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-shield-alt card-icon"></i>
-                    <h3>Safety Verified</h3>
-                    <p>We only utilize ARG/US Gold/Platinum and Wyvern Wingman rated operators.</p>
+                    <h3>Safety by Design</h3>
+                    <p>We are not a carrier. We are your firewall. We only broker flights with Part 135 operators who meet ARGUS Gold/Platinum standards.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-file-invoice-dollar card-icon"></i>
-                    <h3>Transparent Pricing</h3>
-                    <p>No hidden fees. No membership dues. Wholesale pricing models available.</p>
+                    <i class="fas fa-mobile-alt card-icon"></i>
+                    <h3>Native Tech</h3>
+                    <p>No fax machines. No call centers. Digital contracts, crypto acceptance, and seamless communication.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quote Form Section -->
-    <section id="quote" class="section-padding bg-light">
+    <section id="quote" class="section-padding bg-white">
         <div class="container quote-container">
             <div class="quote-header">
                 <h2>Request a Quote</h2>
-                <p>Tell us where you are going. We will handle the rest.</p>
+                <p>Tell us your mission. We will source the optimal aircraft from our vetted network.</p>
             </div>
 
-            <!-- Formspree Form -->
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-grid">
+            <form id="charter-form" action="https://formspree.io/f/mykzrdyl" method="POST">
                 
-                <div class="form-group">
-                    <label>Departure Airport</label>
-                    <input type="text" name="departure" placeholder="e.g. VNY" required>
+                <input type="hidden" name="_subject" value="New Charter Inquiry - Crisply Website">
+                <input type="hidden" name="_next" value="https://crisply.com/thank-you.html">
+                <input type="text" name="_gotcha" style="display:none"> <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="J. Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="you@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="depart">Departure (City/Airport)</label>
+                        <input type="text" id="depart" name="departure" required placeholder="e.g. TEB (Teterboro)">
+                    </div>
+                    <div class="form-group">
+                        <label for="arrive">Arrival (City/Airport)</label>
+                        <input type="text" id="arrive" name="arrival" required placeholder="e.g. VNY (Van Nuys)">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pax">Passengers</label>
+                        <input type="number" id="pax" name="passengers" min="1" max="18" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aircraft">Preferred Aircraft Class</label>
+                        <select id="aircraft" name="aircraft">
+                            <option value="No Preference">Recommended for Mission</option>
+                            <option value="Light Jet">Light Jet (4-6 Pax)</option>
+                            <option value="Midsize Jet">Midsize Jet (7-8 Pax)</option>
+                            <option value="Super Midsize">Super Midsize (Coast to Coast)</option>
+                            <option value="Heavy Jet">Heavy Jet (Intercontinental)</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Arrival Airport</label>
-                    <input type="text" name="arrival" placeholder="e.g. ASE" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Date</label>
-                    <input type="date" name="date" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Passengers</label>
-                    <select name="passengers">
-                        <option value="1-4">1-4</option>
-                        <option value="5-8">5-8</option>
-                        <option value="9+">9+</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" required>
-                </div>
-
-                <div class="form-group" style="grid-column: 1 / -1;">
-                    <label>Additional Details</label>
-                    <textarea name="message" rows="4" placeholder="Catering, pets, or specific aircraft requests..."></textarea>
-                </div>
-
-                <div style="grid-column: 1 / -1;">
-                    <button type="submit" class="btn-submit">Get Quote</button>
-                    <p class="form-disclaimer">By submitting, you agree to our privacy policy and terms of service.</p>
+                <div class="form-footer">
+                    <button type="submit" class="btn-submit">Generate Quote</button>
+                    <p class="form-disclaimer">By submitting, you agree to receive a quote via email. Your data is secure.</p>
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- Footer & Compliance -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>Crisply</h3>
-                    <p>Next Gen Charter Brokerage.</p>
+                    <h3>Crisply.</h3>
+                    <p>The future of charter brokerage.</p>
                 </div>
                 <div class="footer-legal">
                     <h4>Regulatory Disclosures</h4>
                     <p class="legal-text">
-                        <strong>DOT Part 295 Disclosure:</strong> Crisply acts as an authorized agent for the client to arrange air transportation services. Crisply is an air charter broker and is <strong>not a direct air carrier</strong> or foreign direct air carrier in operational control of aircraft.
+                        <strong>Broker Status:</strong> Crisply is an Air Charter Broker and acts as an agent for its clients or as an indirect air carrier, depending on the specific engagement. Crisply is not a Direct Air Carrier and does not own, maintain, or operate any aircraft. 
                     </p>
                     <p class="legal-text">
-                        All flights arranged by Crisply are performed by FAA-certified Part 135 direct air carriers or foreign civil aviation authority equivalent direct air carriers. These operators maintain full operational control of the aircraft at all times. Crisply does not own or operate aircraft. All charter flights are subject to the specific terms and conditions of the direct air carrier.
+                        <strong>Operational Control:</strong> All flights arranged by Crisply are performed by fully FAA-licensed and DOT-registered Part 135 Direct Air Carriers (or foreign equivalent) who maintain full operational control of the aircraft at all times. These carriers are solely responsible for the air transportation services.
+                    </p>
+                    <p class="legal-text">
+                        <strong>Consumer Protection:</strong> In accordance with 14 CFR Part 295, clients are entitled to receive the name of the operating Direct Air Carrier prior to the flight. If this information is unavailable at the time of booking, it will be provided as soon as it becomes available.
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2025 Crisply. All Rights Reserved.
+                <p>&copy; 2026 Crisply. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
